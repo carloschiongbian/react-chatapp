@@ -1,0 +1,43 @@
+.message-data{
+    width: fit-content;
+    text-align: left;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: flex-end;
+    margin-block: 7px;
+
+    .profile-image{                
+        margin-bottom: 6px;
+        width: 100%;
+        img{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+    }
+
+    .message-card{
+        display: grid;
+        grid-template-rows: auto auto; 
+
+        .user-name{
+            font-size: 13px;
+            padding-left: 15px;
+            color: gray;
+        }
+        
+        .message{
+            // box-shadow: 0 0 5px 0 white;
+            border-radius: 17px;
+            padding: 1px;
+            padding-inline: 1px;
+            margin: 10px;
+            width: fit-content;
+            background-color: #3F3351;
+
+            p{
+                padding-inline: 10px;
+            }
+        }        
+    }
+}

@@ -1,0 +1,311 @@
+@import "../globals";
+
+.App-signIn-container{
+    background-color: $landingBGColor;
+}
+
+@media only screen and (min-width: 375px) {
+    .App-signIn-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+
+        .App-signIn {
+            display: flex;     
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: calc(10px + 2vmin);
+            color: white;
+            border-radius: 25px 25px;
+            background-color: $chatboxColor;
+            padding: 30px;
+                
+            button[id="signin-btn"]{
+                border-radius: 10px;
+                border: none;
+                padding: 20px;
+                font-size: 1em;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .signedIn-UI{  
+        height: 100vh;
+
+        .App-chatbox{
+            background-color: $chatboxColor;
+            color: white; 
+            display: flex;
+            flex-direction: column;
+            height: 100vh;           
+
+            .chat-members{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: baseline;
+                box-shadow: 0 8px 6px -5px black;
+                
+                .list, .user-signout{
+                    text-align: center;
+                }
+
+                .list{
+                    display: flex;
+                    flex-direction: row;
+                    overflow-x: scroll;
+                }
+
+                .list > *{
+                    width: 100%;
+                }
+
+                .user-signout{
+                    padding: 30px;
+
+                    button[id="signout-btn"]{
+                        font-size: 16px;
+                        padding: 1em;
+                        border-radius: 10px;
+                        border: none; 
+                        cursor: pointer;
+
+                        img{
+                            height: 25px;
+                            width: 25px;
+                        }
+                    }
+                }
+            } 
+
+            .chat-UI{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                overflow-y: scroll; 
+                border: 1px solid $chatboxColor; 
+
+                .chat-display{
+                    padding-inline: 15px;
+                    text-align: right;
+                    overflow-y: scroll;
+
+                    &::-webkit-scrollbar {
+                        width: 1em;
+                      }
+                       
+                    &::-webkit-scrollbar-track {
+                        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                    }
+                       
+                    &::-webkit-scrollbar-thumb {
+                        background-color: #797086;
+                    }
+
+                    .loading-message{
+                        text-align: center;
+                    }
+                }
+
+                .message-input{
+                    display: flex;
+                    flex-direction: row;
+                    padding: 1em;
+
+                    input, button{
+                        background-color: $chatboxColor;
+                    }
+                    input{
+                        padding: 20px;
+                        font-size: 17px;
+                        width: 100%;
+                        outline: none;
+                        border-top-left-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        border: none;
+                        color: white;
+                        background-color: #3F3351;
+                    }
+
+                    button{
+                        color: black;
+                        padding-inline: 20px;
+                        border-top-right-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                        border: 1px solid gray;
+                        background-color: white;
+                        cursor: pointer;
+
+                        img{                            
+                            height: 25px;
+                            width: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 900px){
+    .App-signIn-container {    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .App-signIn {
+            display: flex;     
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: calc(10px + 2vmin);
+            color: white;
+            border-radius: 25px 25px;
+            background-color: $chatboxColor;
+            margin-inline: 30%;
+            padding: 2em;
+                
+            button[id="signin-btn"]{
+                border-radius: 10px;
+                border: none;
+                padding: 20px;
+                font-size: 20px;
+                cursor: pointer;
+                width: 50%;
+
+                img{ 
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+        }
+    }
+    .signedIn-UI{   
+        height: 100vh;
+        .App-chatbox{
+            background-color: $chatboxColor;
+            color: white; 
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            height: 100%;            
+
+            .chat-members{
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding-block: 50px;
+                box-shadow: 10px 0 5px -10px black;
+                
+                
+                .list, .user-signout{
+                    text-align: center;
+                }
+
+                .list{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    padding-inline: 30px;
+                    overflow-x: hidden; 
+                }
+
+                .list > *{
+                    width: 100%;
+                }
+
+                .user-signout{
+                    width: 100%; 
+                    padding: 0;
+
+                    button[id="signout-btn"]{
+                        font-size: 16px;
+                        padding: 20px;
+                        border-radius: 10px;
+                        border: none;
+                        width: 80%;
+                        cursor: pointer;
+
+                        img{
+                            height: 25px;
+                            width: 25px;
+                        }
+                    }
+                }
+            }
+
+            .chat-UI{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 70%;
+                border: 1px solid $chatboxColor; 
+                overflow-y: hidden; 
+
+                .chat-display{
+                    padding-inline: 30px;
+                    text-align: right;
+                    overflow-y: scroll;
+
+                    &::-webkit-scrollbar {
+                        width: 1em;
+                      }
+                       
+                    &::-webkit-scrollbar-track {
+                        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                    }
+                       
+                    &::-webkit-scrollbar-thumb {
+                        background-color: #797086;
+                    }
+
+                    .loading-message{
+                        text-align: center;
+                    }
+                }
+
+                .message-input{
+                    display: flex;
+                    flex-direction: row; 
+                    padding: 30px;
+
+                    input, button{
+                        background-color: $chatboxColor;
+                    }
+                    input{
+                        padding: 20px;
+                        font-size: 17px;
+                        width: 100%;
+                        outline: none;
+                        border-top-left-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        border: none;
+                        color: white;
+                        background-color: #3F3351;
+                    }
+
+                    button{
+                        color: black;
+                        padding-inline: 20px;
+                        border-top-right-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                        border: 1px solid gray;
+                        background-color: white;
+                        cursor: pointer;
+
+                        img{                            
+                            height: 25px;
+                            width: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

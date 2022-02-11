@@ -1,0 +1,54 @@
+.message-data {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: left;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-block: 7px;
+}
+
+.message-data .profile-image {
+  margin-bottom: 6px;
+  width: 100%;
+}
+
+.message-data .profile-image img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.message-data .message-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+}
+
+.message-data .message-card .user-name {
+  font-size: 13px;
+  padding-left: 15px;
+  color: gray;
+}
+
+.message-data .message-card .message {
+  border-radius: 17px;
+  padding: 1px;
+  padding-inline: 1px;
+  margin: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #3F3351;
+}
+
+.message-data .message-card .message p {
+  padding-inline: 10px;
+}
+/*# sourceMappingURL=styles.css.map */
